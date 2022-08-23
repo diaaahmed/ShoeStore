@@ -7,6 +7,9 @@
 
     </data>
 
+    <!-- User constraintlayout to conrtol all view in this layout -->
+    <!-- it help me to put views in positions what i want -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

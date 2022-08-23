@@ -1,11 +1,9 @@
 package com.udacity.viewmodel
 
 import android.util.Log
-import androidx.appcompat.view.menu.ShowableListMenu
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.udacity.ShoeEvent
 import com.udacity.model.Shoe
 
 enum class Stata()
@@ -15,6 +13,8 @@ enum class Stata()
 }
 class ShoeViewModel: ViewModel()
 {
+
+    var fakeShoe = Shoe("First name","First company","First size","First description")
     private var _shoeList  = MutableLiveData<MutableList<Shoe>>()
 
     val shoeList: LiveData<MutableList<Shoe>> get() = _shoeList

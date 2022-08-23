@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    >
 
     <data>
-
+        <variable
+            name="shoeViewModel"
+            type="com.udacity.viewmodel.ShoeViewModel" />
     </data>
 
+    <!-- User constraintlayout to control all view in this layout -->
+    <!-- it help me to put views in positions what i want -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- Here use edit text to put Shoe Name when add new shoe-->
         <EditText
+            android:importantForAutofill="no"
             android:id="@+id/ed_shoeName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
             android:hint="@string/shoe_name"
+            android:text="@={shoeViewModel.fakeShoe.shoeName}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -25,13 +32,16 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.15" />
 
+        <!-- Here use edit text to put Shoe Company when add new shoe-->
         <EditText
+            android:importantForAutofill="no"
             android:id="@+id/ed_shoeCompany"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
             android:hint="@string/shoe_company"
+            android:text="@={shoeViewModel.fakeShoe.shoeCompany}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -39,13 +49,16 @@
             app:layout_constraintTop_toBottomOf="@id/ed_shoeName"
             app:layout_constraintVertical_bias="0.068" />
 
+        <!-- Here use edit text to put Shoe Size when add new shoe-->
         <EditText
+            android:importantForAutofill="no"
             android:id="@+id/ed_shoeSize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
             android:hint="@string/shoe_size"
+            android:text="@={shoeViewModel.fakeShoe.shoeSize}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -53,13 +66,17 @@
             app:layout_constraintTop_toBottomOf="@id/ed_shoeCompany"
             app:layout_constraintVertical_bias="0.068" />
 
+        <!-- Here use edit text to put Shoe Description when add new shoe-->
+
         <EditText
+            android:importantForAutofill="no"
             android:id="@+id/ed_shoeDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
             android:hint="@string/shoe_description"
+            android:text="@={shoeViewModel.fakeShoe.shoeDescription}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
