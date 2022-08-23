@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    >
 
     <data>
 
@@ -10,13 +10,16 @@
             type="com.udacity.model.Shoe"/>
     </data>
 
+    <!-- constraintlayout help us to control view in this layout-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!-- label for company -->
+
         <TextView
             android:id="@+id/company_lb"
-            android:text="Company"
+            android:text="@string/company"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -25,35 +28,43 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <!-- label for name -->
+
         <TextView
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            android:text="Name"
+            android:text="@string/name"
             android:textStyle="bold"
             android:id="@+id/name_lb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <!-- label for size -->
+
         <TextView
             app:layout_constraintStart_toStartOf="@id/company_lb"
             app:layout_constraintTop_toBottomOf="@id/company_lb"
-            android:text="Size"
+            android:text="@string/size"
             android:textStyle="bold"
             android:id="@+id/size_lb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <!-- label for description -->
+
+
         <TextView
             app:layout_constraintStart_toStartOf="@id/size_lb"
             app:layout_constraintTop_toBottomOf="@id/size_lb"
-            android:text="Description"
+            android:text="@string/description"
             android:textStyle="bold"
             android:id="@+id/desc_lb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <!-- textview to show shoe description-->
         <TextView
             app:layout_constraintStart_toEndOf="@id/desc_lb"
             app:layout_constraintTop_toBottomOf="@+id/size_text"
@@ -62,6 +73,8 @@
             android:id="@+id/desc_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
+        <!-- textview to show shoe size-->
 
         <TextView
             app:layout_constraintStart_toEndOf="@id/size_lb"
@@ -72,6 +85,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <!-- textview to show shoe name-->
+
         <TextView
             app:layout_constraintStart_toEndOf="@id/name_lb"
             app:layout_constraintTop_toTopOf="parent"
@@ -80,6 +95,8 @@
             android:id="@+id/name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
+        <!-- textview to show shoe company-->
 
         <TextView
             app:layout_constraintStart_toEndOf="@id/company_lb"
