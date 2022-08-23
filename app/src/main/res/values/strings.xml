@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="login">Login</string>
+    <string name="login_with_existing_account">Login with existing account</string>
+    <string name="welcome">Welcome in our shoe app! make you add your shoes</string>
+    <string name="udacity_first_project">Udacity first project</string>
+    <string name="next">Next</string>
+    <string name="instruction_fragment_text1">You need to create an account by insert email and password</string>
+    <string name="instruction_fragment_text2">Then add new shoes to store</string>
+    <string name="go_to_shoes_list">Go to shoes list</string>
+    <string name="logout">Logout</string>
+    <string name="shoe_description">Shoe description</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="shoe_company">Shoe Company</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+
+</resources>

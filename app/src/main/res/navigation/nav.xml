@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.udacity.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment"
+            app:popUpTo="@id/nav"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_loginFragment_to_shoeList"
+            app:destination="@id/shoeList"
+            app:popUpTo="@id/nav" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shoeList"
+        android:name="com.udacity.shoelist.ShoeList"
+        android:label="fragment_shoe_list"
+        tools:layout="@layout/fragment_shoe_list" >
+        <action
+            android:id="@+id/action_shoeList_to_shoeDetailsFragment"
+            app:destination="@id/shoeDetailsFragment" />
+        <action
+            android:id="@+id/action_shoeList_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.udacity.onBoarding.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_instructionFragment"
+            app:destination="@id/instructionFragment"
+            app:popUpTo="@id/nav" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="com.udacity.instructions.InstructionFragment"
+        android:label="fragment_instruction"
+        tools:layout="@layout/fragment_instruction" >
+        <action
+            android:id="@+id/action_instructionFragment_to_shoeList"
+            app:destination="@id/shoeList"
+            app:popUpTo="@id/nav" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shoeDetailsFragment"
+        android:name="com.udacity.shoedetails.ShoeDetailsFragment"
+        android:label="fragment_shoe_details"
+        tools:layout="@layout/fragment_shoe_details" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.udacity.splash.SplashFragment"
+        android:label="fragment_spach"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_spachFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/nav" />
+        <action
+            android:id="@+id/action_spachFragment_to_shoeList"
+            app:destination="@id/shoeList"
+            app:popUpTo="@id/nav" />
+    </fragment>
+</navigation>
